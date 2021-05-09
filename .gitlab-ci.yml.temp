@@ -1,0 +1,32 @@
+image: node:12.13.0
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - yarn install
+
+build:site:
+  stage: build
+  only:
+    - main
+  script:
+    - yarn run build
+  artifacts:
+    paths:
+      - public
+
+deploy:site:
+  stage: deploy
+  only:
+    - main
+  script:
+    - npm install --unsafe-perm=true -g netlify-cli
+    - netlify deploy --site f5ae8169-4fde-43d8-a827-c215130c255d --auth d8d7Xx14zzLw0RzlkvGdCpoFTf_gE9x3Pq3DiORQCaM --message "$CI_COMMIT_TITLE"
+  dependencies:
+    - build:site
