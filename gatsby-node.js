@@ -21,7 +21,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 }
 
 module.exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
     const blogTemplate = path.resolve("./src/templates/blog.js")
     const blogListTemplate = path.resolve("./src/templates/blogs.js")
     const respone = await graphql(`
@@ -51,6 +51,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
       component: blogListTemplate
     });
 
+    createRedirect({
+      fromPath: '/',
+      toPath: '/blogs',
+      isPermanent: true,
+      redirectInBrowser: true,
+    })
 
     respone.data.allMarkdownRemark.edges.forEach((edge) => {
         createPage({

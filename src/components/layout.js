@@ -13,8 +13,8 @@ const Layout = ({ children }) => {
     paper: {
       position: "absolute",
       margin: theme.spacing(2),
-      padding: theme.spacing(4),
-      top: "119px"
+      padding: theme.spacing(2),
+      left: "245px"
     },
   }));
   const classes = useStyles();

@@ -7,7 +7,6 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Pagination = ({ pageContext }) => {
-
     const useStyles = makeStyles((theme) => ({  
         title: {
             flexGrow: 1,
