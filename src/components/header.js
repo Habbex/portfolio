@@ -145,26 +145,26 @@ const Header = () => {
             </ListItem>
             <Link activeClassName={classes.activeLink} className={classes.link} to="/blogs">
               <ListItem button >
-                <ListItemIcon><CollectionsBookmarkIcon /> </ListItemIcon>
                 <ListItemText primary="Blog posts" />
+                <ListItemIcon><CollectionsBookmarkIcon /></ListItemIcon>
               </ListItem>
             </Link>
             <Link activeClassName={classes.activeLink} className={classes.link} to="/projects">
-              <ListItem button >
-                <ListItemIcon><CategoryIcon /> </ListItemIcon>
+              <ListItem button >  
                 <ListItemText primary="Projects" />
+                <ListItemIcon><CategoryIcon /> </ListItemIcon>
               </ListItem>
             </Link>
             <Link activeClassName={classes.activeLink} className={classes.link} to="/contact-me">
               <ListItem button >
-                <ListItemIcon><ContactMailIcon /> </ListItemIcon>
                 <ListItemText primary="Contact Me" />
+                <ListItemIcon><ContactMailIcon /> </ListItemIcon>
               </ListItem>
             </Link>
             <Link activeClassName={classes.activeLink} className={classes.link} to="/about-me">
               <ListItem button >
-                <ListItemIcon><InfoIcon /> </ListItemIcon>
                 <ListItemText primary="About Me" />
+                <ListItemIcon><InfoIcon /> </ListItemIcon>
               </ListItem>
             </Link>
             <ListItem>

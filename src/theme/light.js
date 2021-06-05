@@ -4,28 +4,21 @@ const lightTheme = {
     palette: {
         type: 'light',
         primary: {
-          main: '#152935',
-          light: '#00c3ea',
-          dark: '#005075',
+          main: '#ff9d00',
+          light: '#ffca00',
         },
         secondary: {
-          main: '#fc4e3d',
+          main: '#bae8e8',
         },
-        warning: {
-          main: '#fdb927',
-        },
-        info: {
-          main: '#0d6c80',
-        },
+        divider: '#e3f6f5',
         background: {
-          default: '#f2f5f8',
+          paper: '#fffffe',
+          default: '#fffffe',
         },
         text: {
-            primary: '#152935', // YankeesBlue
-            secondary: '#5A6872', //Cadet
-            disabled: '#9DA6AD', // QuickSilver
-            hint: '#C1C1C4', // SilverSand
-          },
+          primary: '#272343',
+          secondary: '#2d334a',
+        },
       },
 }
 

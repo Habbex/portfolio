@@ -12,8 +12,8 @@ const Layout = ({ children }) => {
     },
     paper: {
       position: "absolute",
-      margin: theme.spacing(2),
-      padding: theme.spacing(2),
+      margin: theme.spacing(1),
+      padding: theme.spacing(1),
       left: "245px"
     },
   }));
@@ -24,9 +24,12 @@ const Layout = ({ children }) => {
      <div className={classes.root}>
       <Container maxWidth="lg">
         <Grid container spacing={2} direction="column">
-          <Paper className={classes.paper} elevation={3}>
-              {children}
-          </Paper>
+          {/* <Paper className={classes.paper} elevation={3}> */}
+          <div className={classes.paper}>
+               {children}
+          </div>
+             
+          {/* </Paper> */}
         </Grid>
       </Container>
     </div>
